@@ -1,5 +1,6 @@
 package task01.traffic.light;
 import java.util.Scanner;
+
 /**
  * Traffic light task for Epam Java Development Courses
  * Gets minute as input and returns color of current signal
