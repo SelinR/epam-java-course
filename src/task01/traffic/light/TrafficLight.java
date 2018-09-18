@@ -32,11 +32,11 @@ public class TrafficLight {
         */
         time %= cycleDuration;
         if (time <= redDuration) {
-            System.out.println("Red");
+            System.out.println("Traffic light shows Red");
         } else if (time <= redDuration + yellowDuration) {
-            System.out.println("Yellow");
+            System.out.println("Traffic light shows Yellow");
         } else if (time <= cycleDuration) {
-            System.out.println("Green");
+            System.out.println("Traffic light shows Green");
         }
     }
 }
