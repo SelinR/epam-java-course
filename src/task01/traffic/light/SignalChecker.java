@@ -34,7 +34,7 @@ class SignalChecker {
         } else if (time <= cycleDuration) {
             return thirdSignal;
         } else {
-            return null;
+            throw new IllegalArgumentException("Wrong value!");
         }
     }
 }
