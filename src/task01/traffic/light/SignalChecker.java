@@ -12,6 +12,9 @@ class SignalChecker {
     private int yellowDuration = 3;
     private int greenDuration = 5;
     private int cycleDuration = redDuration + yellowDuration + greenDuration;
+    private String firstSignal = "Red";
+    private String secondSignal = "Yellow";
+    private String thirdSignal = "Green";
     
     /**
      * First this method finds out what minute of current cycle is now.
@@ -25,11 +28,11 @@ class SignalChecker {
         if (time < 0) {
             throw new IllegalArgumentException("Wrong value!");
         } else if (time <= redDuration) {
-            return "Red";
+            return firstSignal;
         } else if (time <= redDuration + yellowDuration) {
-            return "Yellow";
+            return secondSignal;
         } else if (time <= cycleDuration) {
-            return "Green";
+            return thirdSignal;
         } else {
             return null;
         }
