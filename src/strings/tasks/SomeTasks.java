@@ -3,59 +3,64 @@ package strings.tasks;
 import java.util.Scanner;
 
 /**
- * Tasks 9.13-9.15 from Zlatopolsky
+ * 9.13-9.15 and 9.100 tasks from Zlatopolsky
  *
  * @author Selin Roman
  * @version 1.0
  */
-public class FirstThreeTasks {
+public class SomeTasks {
     public static void main(String[] args) {
         char letter;
-        
+    
+        System.out.println("Please print some word and then index k for task 9.15.");
         Scanner scanner = new Scanner(System.in);
         String someWord = scanner.nextLine();
-        System.out.println("Please print some word and then index k "
-                + "for task 9.15.");
         int indexOfLetter = scanner.nextInt();
-        FirstThreeTasks firstThreeTasks = new FirstThreeTasks();
+        SomeTasks someTasks = new SomeTasks();
         
         //Task 9.13. Display on screen third letter of word
-        letter = firstThreeTasks.getLetter(someWord, 3);
+        letter = someTasks.getLetter(someWord, 3);
         System.out.println("9.13 result: " + letter);
         
         //Task 9.14. Display on screen last letter of word
-        letter = firstThreeTasks.getLetter(someWord, someWord.length());
+        letter = someTasks.getLetter(someWord, someWord.length());
         System.out.println("9.14 result: " + letter);
         
         //Task 9.15. Display on screen k letter of word
-        letter = firstThreeTasks.getLetter(someWord, indexOfLetter);
+        letter = someTasks.getLetter(someWord, indexOfLetter);
         System.out.println("9.15 result: " + letter);
         
         //Task 9.100. Change positions of second and fifth symbols
-        
-        
+        String changedWord = someTasks.changePostions(someWord, 2, 5);
+        System.out.println("9.100 result: " + changedWord);
     }
     
     /**
-     * Takes word and index and returns letter which stands on chosen
-     * index in given word
+     * Takes word and index and returns letter which stands on chosen index in given word.
      *
-     * @param word
-     * @param index
-     * @return
+     * @param word given word.
+     * @param index given index.
+     * @return letter we need.
      */
     private char getLetter (String word, int index) {
-        // TODO add some exceptions
         char letter;
         letter = word.charAt(index - 1);
         return letter;
     }
     
+    /**
+     * Changes positions of two letters with given indexes.
+     * @param word given word.
+     * @param firstIndex first index.
+     * @param secondIndex second index.
+     * @return changed word.
+     */
     private String changePostions (String word, int firstIndex, int secondIndex) {
-        String changedWord;
-        
-        
-        return changedWord;
+        char[] newCharArray = word.toCharArray();
+        char tempChar = newCharArray[firstIndex - 1];
+        newCharArray[firstIndex - 1] = newCharArray[secondIndex - 1];
+        newCharArray[secondIndex - 1] = tempChar;
+        return new String(newCharArray);
     }
 }
 
