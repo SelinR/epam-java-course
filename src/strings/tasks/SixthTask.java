@@ -28,7 +28,7 @@ public class SixthTask {
         StringBuilder reversedSentence = new StringBuilder();
         String[] wordsArray = sentence.split(" ");
         for (String word : wordsArray) {
-            reversedSentence.append(reverseWord(word));
+            reversedSentence.append(reverseWord(word)).append(" ");
         }
         return  reversedSentence.toString();
     }
