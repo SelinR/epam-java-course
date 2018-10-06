@@ -6,6 +6,7 @@ import java.util.Scanner;
  * Task 9.64 from Zlatopolsky.
  * This task gets sentence and founds number of equal neighbor symbols.
  * Example: for sentence "aaa BB" answer will be 5.
+ *
  * @author Selin Roman
  * @version 1.0
  */
@@ -34,8 +35,7 @@ public class FourthTask {
                 lengthOfEqualString++;
                 if (lengthOfEqualString > 2) {
                     counter++;
-                }
-                else {
+                } else {
                     counter += 2;
                 }
             }

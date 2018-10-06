@@ -43,9 +43,7 @@ public class SomeTasks {
      * @return letter we need.
      */
     private char getLetter (String word, int index) {
-        char letter;
-        letter = word.charAt(index - 1);
-        return letter;
+        return word.charAt(index - 1);
     }
     
     /**
